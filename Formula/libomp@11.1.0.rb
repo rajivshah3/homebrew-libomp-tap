@@ -10,6 +10,12 @@ class LibompAT1110 < Formula
     regex(/LLVM (\d+\.\d+\.\d+)/i)
   end
 
+  bottle do
+    root_url "https://github.com/rajivshah3/homebrew-libomp-tap/releases/download/libomp@11.1.0-11.1.0"
+    sha256 cellar: :any,                 catalina:     "4d35c910f3da2310958de8cd4931f1f2229c597473ce213b4a1d77224979ac9e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c4e846ac831d4b2fc244d9cbb1fe24f02e9fd1e933e4ae385851becb99817b50"
+  end
+
   depends_on "cmake" => :build
 
   # Upstream patch for ARM, accepted, remove in next version
